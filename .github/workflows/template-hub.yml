@@ -38,7 +38,7 @@ jobs:
                --template-file deploy/Services/hub.bicep `
                --parameters webAppName="$($webAppName)" servicePlanName="$($servicePlanName)" storageAccountName="$($storageAccountName)" administratorLogin="$($administratorLogin)" administratorLoginPassword="$($administratorLoginPassword)" serverName="$($serverName)" apiName="$($apiName)"
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: drop
           path: hub
